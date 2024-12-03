@@ -13,8 +13,11 @@ from imblearn.combine import SMOTETomek
 # 1. Đọc dataset
 data = pd.read_csv('Hotel Reservations.csv')
 
-# 2. Làm sạch dữ liệu
+# 2. Làm sạch dữ liệuD
 data = data.dropna()
+
+print(f"Số lượng mẫu ban đầu: {data.shape[0]}")
+
 
 # Loại bỏ ngoại lệ (dựa trên IQR)
 numeric_columns = ['lead_time', 'no_of_adults', 'no_of_children', 'no_of_weekend_nights', 'no_of_week_nights', 'avg_price_per_room', 'no_of_special_requests']
